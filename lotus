@@ -31,7 +31,7 @@ while _G.Condition == true do
            [2] = "Green Lotus"
        }
        game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
-       wait(8)
+       wait(2)
    end
 
    for k, v in pairs(workspace.Areas["Green Pelago"]:GetChildren()) do
