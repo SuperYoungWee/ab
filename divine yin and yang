@@ -34,6 +34,13 @@ while _G.Condition == true do
        end
    end
 
+   -- Rename the "Divine Yang Tree" to "XiaoRed" with an incrementing number
+   for k, v in pairs(workspace.Areas["White Pelago"]:GetChildren()) do
+           if v.Name == "Divine Yang Tree" then
+               v.Name = "XiaoBlue" .. k
+       end
+   end
+
    -- Harvest Divine Yang Fruit from each XiaoRed tree and wait 8 seconds before harvesting again
    for i = 2, 7 do
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Areas["White Pelago"]["XiaoBlue" .. i].Plant.CFrame
@@ -51,7 +58,7 @@ while _G.Condition == true do
            v.Name = "XiaoBlue" .. k
        end
    end
-         
+
    -- Wait before starting the loop again
    wait()
 end
