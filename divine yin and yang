@@ -1,0 +1,58 @@
+-- Set the condition to true to turn it on or false to turn it off
+_G.Condition = true
+
+while _G.Condition == true do
+   -- Rename the "Divine Yang Tree" to "XiaoRed" with an incrementing number
+   for k, v in pairs(workspace.Areas["Demon Pelago"]:GetChildren()) do
+           if v.Name == "Divine Yang Tree" then
+               v.Name = "XiaoRed" .. k
+       end
+   end
+
+   -- Harvest Divine Yang Fruit from each XiaoRed tree and wait 8 seconds before harvesting again
+   for i = 2, 7 do
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Areas["Demon Pelago"]["XiaoRed" .. i].Plant.CFrame
+       wait(0.3)
+       local args = {
+           [1] = workspace.Areas:FindFirstChild("Demon Pelago")["XiaoRed" .. i].Plant,
+           [2] = "Divine Yang Fruit"
+       }
+       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
+       wait(2)
+   end
+
+   for k, v in pairs(workspace.Areas["Demon Pelago"]:GetChildren()) do
+       if v.Name == "Divine Yang Tree" then
+           v.Name = "XiaoRed" .. k
+       end
+   end
+
+while _G.Condition == true do
+   -- Rename the "Divine Yang Tree" to "XiaoRed" with an incrementing number
+   for k, v in pairs(workspace.Areas["White Pelago"]:GetChildren()) do
+           if v.Name == "Divine Yang Tree" then
+               v.Name = "XiaoBlue" .. k
+       end
+   end
+
+   -- Harvest Divine Yang Fruit from each XiaoRed tree and wait 8 seconds before harvesting again
+   for i = 2, 7 do
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Areas["White Pelago"]["XiaoBlue" .. i].Plant.CFrame
+       wait(0.3)
+       local args = {
+           [1] = workspace.Areas:FindFirstChild("White Pelago")["XiaoBlue" .. i].Plant,
+           [2] = "Divine Yang Fruit"
+       }
+       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
+       wait(2)
+   end
+
+   for k, v in pairs(workspace.Areas["White Pelago"]:GetChildren()) do
+       if v.Name == "Divine Yang Tree" then
+           v.Name = "XiaoBlue" .. k
+       end
+   end
+         
+   -- Wait before starting the loop again
+   wait()
+end
