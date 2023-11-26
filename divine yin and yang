@@ -27,7 +27,6 @@ while _G.Condition == true do
        end
    end
 
-while _G.Condition == true do
    -- Rename the "Divine Yang Tree" to "XiaoRed" with an incrementing number
    for k, v in pairs(workspace.Areas["White Pelago"]:GetChildren()) do
            if v.Name == "Divine Yang Tree" then
