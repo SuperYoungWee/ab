@@ -2,37 +2,20 @@ local Condition = true -- true turns it on, false turns it off
 local counter = 1
 
 while Condition do
-  local crystal = game.workspace["MineSS"]:GetChildren()
+  local ginsengPlants = game.workspace["MineSS"]:GetChildren()
 
-  for k, v in pairs(crystal) do
+  for k, v in pairs(ginsengPlants) do
       if v.Name == "SovereignTier" then
-          v.Name = "Sov" .. counter
+          v.Name = "MoonieChan" .. counter
           counter = counter + 1
       end
   end
 
   for i = 1, 16 do
-      local sovc = game.workspace["MineSS"]["Sov" .. i]
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = sovc.CFrame
+      local mooniechannnn = game.workspace["MineSS"]["MoonieChan" .. i]
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = mooniechannnn.CFrame
       wait(0.3)
-      local args = { sovc, "Mine 10" }
-      game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
-      wait(2)
-  end
-end
-
-  for k, v in pairs(crystal) do
-      if v.Name == "GodTier" then
-          v.Name = "God" .. counter
-          counter = counter + 1
-      end
-  end
-
-  for i = 1, 16 do
-      local godc = game.workspace["MineSS"]["God" .. i]
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = godc.CFrame
-      wait(0.3)
-      local args = { godc, "Mine 9" }
+      local args = { mooniechannnn, "Mine 10" }
       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
       wait(2)
   end
