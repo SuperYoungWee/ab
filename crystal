@@ -2,7 +2,7 @@ local Condition = true -- true turns it on, false turns it off
 local counter = 1
 
 while Condition do
-  local crystal = workspace:GetChildren()
+  local crystal = workspace.MineSS:GetChildren()
 
   for k, v in pairs(crystal) do
       if v.Name == "SovereignTier" then
@@ -12,7 +12,7 @@ while Condition do
   end
 
   for i = 1, 16 do
-      local Sov = workspace["XiaoWhite" .. i]
+      local Sov = workspace.MineSS["XiaoWhite" .. i]
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Sov.CFrame
       wait(0.3)
       local args = {
