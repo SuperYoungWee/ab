@@ -1,6 +1,6 @@
 -- Set the condition to true to turn it on or false to turn it off
 _G.Condition = true
-local counter = 0
+local counter = 1
 
 while _G.Condition == true do
    -- Rename the "Divine Yang Tree" to "XiaoRed" with an incrementing number
