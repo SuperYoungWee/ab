@@ -3,8 +3,8 @@ _G.Condition = true
 
 while _G.Condition == true do
    -- Rename the "Divine Yang Tree" to "XiaoRed" with an incrementing number
-   for k, v in pairs(game.workspace["MineSS"]:GetChildren()) do
-           k = k + 1
+   for k = k + 1, v in pairs(game.workspace["MineSS"]:GetChildren()) do
+           
            if v.Name == "SovereignTier" then
                v.Name = "XiaoWhite" .. k
        end
