@@ -11,7 +11,7 @@ while _G.Condition == true do
 
    -- Harvest Divine Yang Fruit from each XiaoRed tree and wait 8 seconds before harvesting again
    for i = 2, 7 do
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.MineSS["SovereignTier"]["Sov" .. i].CFrame
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.MineSS["SovereignTier"]["Sov" .. i].CFrame
        wait(0.3)
        local args = {
            [1] = workspace.MineSS["SovereignTier"]["Sov" .. i],
