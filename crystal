@@ -22,7 +22,7 @@ while _G.Condition == true do
        wait(2.3)
    end
 
-   for k, v in pairs(game.workspace["MineSS"]:GetChildren()) do
+   for k = k + 1, v in pairs(game.workspace["MineSS"]:GetChildren()) do
        if v.Name == "SovereignTier" then
            v.Name = "XiaoWhite" .. k
        end
