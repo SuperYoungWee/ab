@@ -21,7 +21,7 @@ while Condition do
   end
 end
 
-  for k, v in pairs(ginsengPlants1) do
+  for k, v in pairs(crystal) do
       if v.Name == "GodTier" then
           v.Name = "God" .. counter
           counter = counter + 1
