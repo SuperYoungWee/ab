@@ -1,6 +1,5 @@
 -- Set the condition to true to turn it on or false to turn it off
 _G.Condition = true
-local k = 0
 while _G.Condition == true do
    -- Rename the "Divine Yang Tree" to "XiaoRed" with an incrementing number
    for k, v in pairs(game.workspace["MineSS"]:GetChildren()) do
