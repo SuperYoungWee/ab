@@ -1,34 +1,22 @@
--- Set the condition to true to turn it on or false to turn it off
-_G.Condition = true
+local Condition = true -- true turns it on, false turns it off
 local counter = 1
 
-while _G.Condition == true do
-   -- Rename the "Divine Yang Tree" to "XiaoRed" with an incrementing number
-   for k, v in pairs(game.workspace["MineSS"]:GetChildren()) do
-           if v.Name == "SovereignTier" then
-               v.Name = "XiaoWhite" .. counter
-			   counter = counter + 1
-       end
-   end
+while Condition do
+  local ginsengPlants = workspace:GetChildren()
 
-   -- Harvest Divine Yang Fruit from each XiaoRed tree and wait 8 seconds before harvesting again
-   for i = 1, 16 do
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace["MineSS"]["XiaoWhite" .. i].CFrame
-       wait(0.3)
-       local args = {
-           [1] = workspace.MineSS.SovereignTier["XiaoWhite" .. i],
-           [2] = "Mine 10"
-       }
-       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
-       wait(2.3)
-   end
+  for k, v in pairs(ginsengPlants) do
+      if v.Name == "SovereignTier" then
+          v.Name = "MoonieChan" .. counter
+          counter = counter + 1
+      end
+  end
 
-   for k, v in pairs(game.workspace["MineSS"]:GetChildren()) do
-       if v.Name == "SovereignTier" then
-           v.Name = "XiaoWhite" .. k
-       end
-   end
-
-   -- Wait before starting the loop again
-   wait()
+  for i = 1, 16 do
+      local mooniechannnn = workspace["MoonieChan" .. i]
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = mooniechannnn.CFrame
+      wait(0.3)
+      local args = { mooniechannnn, "Mine 10" }
+      game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
+      wait(2)
+  end
 end
