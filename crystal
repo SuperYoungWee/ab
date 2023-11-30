@@ -15,7 +15,10 @@ while Condition do
       local Sov = workspace["XiaoWhite" .. i]
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Sov.CFrame
       wait(0.3)
-      local args = { Sov, "SovereignTier" }
+      local args = {
+      [1] = workspace.MineSS.SovereignTier,
+      [2] = "Mine 10"
+      }
       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
       wait(2.3)
   end
