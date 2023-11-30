@@ -20,3 +20,22 @@ while Condition do
       wait(2)
   end
 end
+
+local ginsengPlants1 = game.workspace["MineSS"]:GetChildren()
+
+  for k, v in pairs(ginsengPlants1) do
+      if v.Name == "GodTier" then
+          v.Name = "MoonieChan1" .. counter
+          counter = counter + 1
+      end
+  end
+
+  for i = 1, 16 do
+      local mooniechannnn1 = game.workspace["MineSS"]["MoonieChan1" .. i]
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = mooniechannnn1.CFrame
+      wait(0.3)
+      local args = { mooniechannnn1, "Mine 9" }
+      game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
+      wait(2)
+  end
+end
