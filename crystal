@@ -20,20 +20,3 @@ while Condition do
       wait(2)
   end
 end
-
-  for k, v in pairs(crystal) do
-      if v.Name == "GodTier" then
-          v.Name = "God" .. counter
-          counter = counter + 1
-      end
-  end
-
-  for i = 1, 16 do
-      local godc = game.workspace["MineSS"]["God" .. i]
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = godc.CFrame
-      wait(0.3)
-      local args = { godc, "Mine 9" }
-      game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
-      wait(2)
-  end
-end
