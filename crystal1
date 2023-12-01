@@ -1,4 +1,4 @@
-local Condition = true -- true turns it on, false turns it off
+local Condition = false -- true turns it on, false turns it off
 local counter = 1
 
 while Condition do
