@@ -6,28 +6,4 @@ while Condition do
           v.Name = "Sov" .. k
 		end
 	end		
-		  
-  for i = 1, 16 do
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace["MineSS"]["Sov" .. i].CFrame
-	  wait(0.3)
-      local args = { game.workspace["MineSS"]["Sov" .. i], "Mine 10" }
-      game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
-	  wait(2)
-  end
-end
-
-  for k, v in pairs(game.workspace["MineSS"]:GetChildren()) do
-	if v.Name == "GodTier" then
-        v.Name = "God" .. k
-      end
-  end
-  
-  for i = 1, 17 do
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace["MineSS"]["God" .. i].CFrame
-	  wait(0.3)
-      local args = { game.workspace["MineSS"]["God" .. i], "Mine 9" }
-      game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
-	  wait(2)
-  end
-end
-
+	
