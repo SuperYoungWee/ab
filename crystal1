@@ -25,8 +25,7 @@ while Condition do
       local args = { mooniechannnn, "Mine 10" }
       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
       wait(2)
-  end
-end
+	  
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = mooniechannnn.CFrame
       wait(0.3)
       local args = { mooniechannnn, "Mine 9" }
