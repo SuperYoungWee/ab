@@ -20,7 +20,7 @@ while Condition do
 
   for i = 1, 33 do
       local CrystalPathTrigger = game.workspace["MineSS"]["Crystal" .. i]
-	  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CrystalPath.CFrame
+	  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CrystalPathTrigger.CFrame
       wait(0.3)
       	if i <= 16 then
       		local args = { CrystalPathTrigger, "Mine 10" }
