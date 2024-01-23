@@ -13,7 +13,7 @@ while Condition do
 
 for k, v in pairs(ginsengPlants) do
       if v.Name == "GodTier" then
-          v.Name = "MoonieChan" .. counter
+          v.Name = "MoonieChann" .. counter
           counter = counter + 1
       end
   end
@@ -24,13 +24,12 @@ for k, v in pairs(ginsengPlants) do
       wait(0.3)
       local args = { mooniechannnn, "Mine 10" }
       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
-      wait (2)
-  end
-end
-  if i == 16, 17 do
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = mooniechannnn.CFrame
+
+for i = 1, 16 do
+      local mooniechannnnnn = game.workspace["MineSS"]["MoonieChann" .. i]
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = mooniechannnnnn.CFrame
       wait(0.3)
-      local args = { mooniechannnn, "Mine 9" }
+      local args = { mooniechannnnnn, "Mine 9" }
       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
       wait(2)
   end
