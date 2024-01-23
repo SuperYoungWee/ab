@@ -1,0 +1,19 @@
+local Condition = true -- true turns it on, false turns it off
+local counter = 1
+
+while Condition do
+  for i = 1, 33 do
+      local CrystalPathTrigger = game.workspace["MineSS"]["Crystal" .. i]
+	  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CrystalPathTrigger.CFrame
+      wait(0.3)
+      	if i <= 16 then
+      		local args = { CrystalPathTrigger, "Mine 10" }
+     		game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
+      		wait(2)
+		else
+      		local args = { CrystalPathTrigger, "Mine 9" }
+      		game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
+     	 	wait(2)
+        end
+    end
+end
