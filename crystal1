@@ -18,7 +18,7 @@ for k, v in pairs(ginsengPlants) do
       end
   end
 
-  for i = 1, 33 do
+  for i = 1, 16 do
       local mooniechannnn = game.workspace["MineSS"]["MoonieChan" .. i]
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = mooniechannnn.CFrame
       wait(0.3)
@@ -26,6 +26,7 @@ for k, v in pairs(ginsengPlants) do
       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
       wait (2)
 
+if i == 16, 17 do
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = mooniechannnn.CFrame
       wait(0.3)
       local args = { mooniechannnn, "Mine 9" }
