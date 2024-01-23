@@ -1,4 +1,6 @@
- local CrystalPath = game.workspace["MineSS"]:GetChildren()
+local counter = 1
+
+local CrystalPath = game.workspace["MineSS"]:GetChildren()
 
   for k, v in pairs(CrystalPath) do
       if v.Name == "SovereignTier" then
