@@ -24,7 +24,7 @@ for k, v in pairs(ginsengPlants) do
       wait(0.3)
       local args = { mooniechannnn, "Mine 10" }
       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
-      wait(2)
+
       local args = { mooniechannnn, "Mine 9" }
       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
       wait(2)
