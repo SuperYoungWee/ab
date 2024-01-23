@@ -8,13 +8,10 @@ while Condition do
       if v.Name == "SovereignTier" then
           v.Name = "MoonieChan" .. counter
           counter = counter + 1
-      end
-  end
-
-for k, v in pairs(ginsengPlants) do
-      if v.Name == "GodTier" then
-          v.Name = "MoonieChan" .. counter
-          counter = counter + 1
+     else 
+	if v.Name == "GodTier" then
+        v.Name = "MoonieChan" .. counter
+        counter = counter + 1
       end
   end
 
