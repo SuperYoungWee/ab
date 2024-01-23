@@ -8,7 +8,10 @@ while Condition do
       if v.Name == "SovereignTier" then
           v.Name = "MoonieChan" .. counter
           counter = counter + 1
-     else 
+		end
+	end		
+		  
+  for k, v in pairs(ginsengPlants) do
 	if v.Name == "GodTier" then
         v.Name = "MoonieChan" .. counter
         counter = counter + 1
@@ -18,15 +21,6 @@ while Condition do
   for i = 1, 33 do
       local mooniechannnn = game.workspace["MineSS"]["MoonieChan" .. i]
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = mooniechannnn.CFrame
-  if i > 16 then
-      local args = { mooniechannnn, "Mine 9" }
-      game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
-      wait(2)
-	elseif i < 17 then
-		local args = { mooniechannnn, "Mine 10" }
-		game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
-		wait(2)
-	else
       local args = { mooniechannnn, "Mine 10" }
       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
 	  wait(2)
