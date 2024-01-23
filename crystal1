@@ -25,6 +25,10 @@ for k, v in pairs(ginsengPlants) do
       local args = { mooniechannnn, "Mine 9" }
       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
       wait(2)
+	elseif i < 17 then
+		local args = { mooniechannnn, "Mine 10" }
+		game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
+		wait(2)
 	else
       local args = { mooniechannnn, "Mine 10" }
       game:GetService("ReplicatedStorage").Harvest.Harvest:FireServer(unpack(args))
